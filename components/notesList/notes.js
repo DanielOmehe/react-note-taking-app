@@ -1,20 +1,21 @@
 import React from 'react';
 import { Note } from './style'
 
-const Notes =({ notes })=>{
+const AllNotes =({ notes })=>{
+    console.log(notes);
   return (
-    <div className='notes-list'>
-      { notes.map(({ name, date, summary }) => (
+    <>
+      { notes.map(({ name, date, time }) => (
         <Note>
             <h2>{name}</h2>
             <div className='body'>
                 <small>{date}</small>
-                <p>{summary}</p>
+                <p>{time}</p>
             </div>
         </Note>
       ))}
-    </div>
+    </>
   )
 }
 
-export default Notes
+export default AllNotes

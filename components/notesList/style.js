@@ -17,7 +17,6 @@ export const NotesBody = styled.div`
   width: 100%;
   height: 95%;
   padding: 0;
-  border: 2px solid #fff;
 `;
 
 export const Note = styled.div`
@@ -33,6 +32,10 @@ export const Note = styled.div`
     color: rgba(255, 255, 255, 0.6);
   }
 
+  small{
+    color: rgba(255, 255, 255, 0.6);
+  }
+
   h2 {
     font-size: 0.95rem;
     margin-bottom: 0.6rem;
@@ -42,7 +45,7 @@ export const Note = styled.div`
   .body {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 1rem;
   }
 `;

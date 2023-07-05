@@ -32,7 +32,7 @@ const NotesEditor = () => {
 				<NotesEditorSectionHeader>
 					<NoteIcons src="icons/folder.svg" alt="folder" />
 					<p>Folder</p>
-					<p>21/06/2022</p>
+					<p>Personal</p>
 				</NotesEditorSectionHeader>
 				<NoteIcons src="icons/line.svg" alt="line" />
 			</NotesEditorSection>

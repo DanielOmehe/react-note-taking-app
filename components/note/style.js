@@ -66,3 +66,22 @@ export const NotesEditorBody = styled.div`
 export const SelectNotePlaceholder = styled.div`
   width: 100%;
 `
+
+export const NewNoteFormWrapper = styled.section`
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .35);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+`
+
+export const NewNoteForm = styled.form`
+  width: 50rem;
+  height: 25rem;
+  background: #1e1e1e;
+  border-radius: 1rem;
+`

@@ -1,6 +1,16 @@
 import { createContext, useContext } from "react";
 import { useState } from "react";
 
+const notes = [
+    { name: 'My Goals for the next year', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'Reflection on the Month of June', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'My Favorite Memories from Childhood', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'Reflections on My First Year of College', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'My Experience with Meditation', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'Thoughts on the Pandemic', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+    { name: 'My Favorite Recipes', date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), content: '' },
+];
+
 const getId = () => {
 	let string = "abcdef123456789";
 	let idString = "";
@@ -11,11 +21,11 @@ const getId = () => {
 };
 
 export const initialState = [
-	{ id: getId(), name: "Personal", icon: "icons/folder.svg", notes: [], isactive: false },
-	{ id: getId(), name: "Work", icon: "icons/folder.svg", notes: [], isactive: false },
-	{ id: getId(), name: "Travel", icon: "icons/folder.svg", notes: [], isactive: false },
-	{ id: getId(), name: "Event", icon: "icons/folder.svg", notes: [], isactive: false },
-	{ id: getId(), name: "Finances", icon: "icons/folder.svg", notes: [], isactive: false },
+	{ id: getId(), name: "Personal", icon: "icons/folder.svg", notes: [...notes], isactive: false },
+	{ id: getId(), name: "Work", icon: "icons/folder.svg", notes: [...notes], isactive: false },
+	{ id: getId(), name: "Travel", icon: "icons/folder.svg", notes: [...notes], isactive: false },
+	{ id: getId(), name: "Event", icon: "icons/folder.svg", notes: [...notes], isactive: false },
+	{ id: getId(), name: "Finances", icon: "icons/folder.svg", notes: [...notes], isactive: false },
 ];
 
 const NoteTakingAppContext = createContext();
@@ -27,6 +37,7 @@ const NotesAppContext = ({ children }) => {
 	const [folder, setFolder] = useState("");
 	const [show, setShow] = useState(false);
 	const [currentFolder, setCurrentFolder] = useState(0);
+    const [showForm, setShowForm] = useState(false);
 
 	const createNewFolder = (e) => {
         e.preventDefault();
@@ -63,7 +74,9 @@ const NotesAppContext = ({ children }) => {
 				setShow,
 				setFolder,
 				createNewFolder,
-                getCurrentFolder
+                getCurrentFolder,
+                showForm,
+                setShowForm
 			}}
 		>
 			{children}

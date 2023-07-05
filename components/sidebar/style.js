@@ -25,7 +25,8 @@ export const AddNewNotes = styled.div`
   gap: 0.35rem;
   padding: 0.6rem;
   width: 100%;
-  border-radius: 0.1875rem;
+  border-radius: 0.18rem;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.05);
 
   h3 {
