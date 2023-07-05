@@ -12,8 +12,7 @@ import MoreItems from "./more";
 import { useNotesContext } from '../../context';
 
 const NoteSidebar = () => {
-
-    const { setShowForm } = useNotesContext()
+    const { toggleShow, setShowForm } = useNotesContext();
   return (
     <NoteSidebarWrapper>
       <NoteSidebarHeader>
@@ -21,7 +20,7 @@ const NoteSidebar = () => {
         <NoteIcons src="icons/search.svg" alt="search" />
       </NoteSidebarHeader>
       <AddNewNotesContainer>
-        <AddNewNotes onClick={() => setShowForm(true)}>
+        <AddNewNotes onClick={(e) => setShowForm(true)}>
           <NoteIcons src="icons/plus.svg" alt="noted" />
           <h3>New Note</h3>
         </AddNewNotes>

@@ -9,7 +9,7 @@ export const Notes = styled.div`
   h2 {
     font-size: 1.2rem;
     color: #fff;
-    margin-bottom: 1rem;
+    margin: 1rem 0 1.5rem;
   }
 `;
 
@@ -24,19 +24,22 @@ export const Note = styled.div`
   padding: 0.8rem;
   border-radius: 0.1875rem;
   background: rgba(255, 255, 255, 0.03);
-  margin: 1.2rem 0;
+  margin: 1rem 0;
   cursor: pointer;
 
   p {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #fff;
   }
 
   small{
+    border: 1px solid #fff;
     color: rgba(255, 255, 255, 0.6);
   }
 
   h2 {
+    border: 1px solid #fff;
     font-size: 0.95rem;
     margin-bottom: 0.6rem;
     color: #fff;

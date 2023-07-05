@@ -9,7 +9,7 @@ const RecentNotes = () => {
       <h3>Recent</h3>
       <RecentNotesContainer>
         {recents.map(({ text, url }) => (
-          <RecentNote>
+          <RecentNote key={text}>
             <NoteIcons src={url} />
             <p>{text}</p>
           </RecentNote>

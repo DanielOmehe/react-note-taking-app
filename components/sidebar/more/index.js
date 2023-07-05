@@ -10,7 +10,7 @@ const MoreItems = () => {
         <MoreItemsContainer>
         {
             items.map(({ name, icon }) => (
-                <MoreItem>
+                <MoreItem key={name}>
                     <NoteIcons src={icon} alt={name} />
                     <p>{name}</p>
                 </MoreItem>

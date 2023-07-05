@@ -16,7 +16,7 @@ const NotesEditor = () => {
 				<NoteIcons
 					src="icons/ellipsis.svg"
 					alt="ellipsis"
-					border={0.1}
+					show={'true'}
 					radius={100}
 				/>
 			</NotesEditorHeader>

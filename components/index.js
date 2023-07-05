@@ -2,8 +2,9 @@ import React from 'react'
 import NotesSidebar from './sidebar'
 import NotesContainer from './notesList'
 import NotesEditor from './note'
-import NewNoteFormModal from './note/newNoteForm';
+import NewNoteForm from './note/newNoteForm';
 import { useNotesContext } from '../context'
+import NewNoteBackDrop from './note/newNoteModal';
 
 const NotesApp =()=>{
     const { showForm } = useNotesContext();
@@ -12,7 +13,8 @@ const NotesApp =()=>{
       <NotesSidebar />
       <NotesContainer />
       <NotesEditor />
-      <>{ showForm ? <NewNoteFormModal /> : null }</>
+      <>{ showForm ? <NewNoteForm /> : null }</>
+      <>{ showForm ? <NewNoteBackDrop /> : null }</>
     </div>
   )
 }
