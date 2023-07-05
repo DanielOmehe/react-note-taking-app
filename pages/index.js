@@ -1,5 +1,5 @@
 import NotesAppContext from "../context";
-import NotesApp from "../src/components";
+import NotesApp from "../components";
 
 const NoteTakingApp = () => {
   return (
